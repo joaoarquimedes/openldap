@@ -1,0 +1,5 @@
+volumes/backups/ldap/*
+!volumes/backups/ldap/.gitkeep
+
+volumes/ldap/data/*
+!volumes/ldap/data/.gitkeep

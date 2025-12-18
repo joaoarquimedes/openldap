@@ -1,0 +1,14 @@
+dn: dc=exemplo,dc=local
+objectClass: top
+objectClass: dcObject
+objectClass: organization
+o: Exemplo
+dc: exemplo
+
+dn: ou=People,dc=exemplo,dc=local
+objectClass: organizationalUnit
+ou: People
+
+dn: ou=Groups,dc=exemplo,dc=local
+objectClass: organizationalUnit
+ou: Groups

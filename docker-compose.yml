@@ -1,0 +1,12 @@
+services:
+  ldap:
+    build:
+      context: ./Dockerfile/
+      dockerfile: Dockerfile
+    image: ldap:latest
+    container_name: ldap
+    hostname: ldap
+    volumes:
+      - ./conf/slapd.conf:/usr/local/openldap/etc/openldap/slapd.conf:rw
+      - ./volumes/ldap/data:/usr/local/openldap/var/openldap-data:rw
+      - ./volumes/backups/ldap:/backups:rw
