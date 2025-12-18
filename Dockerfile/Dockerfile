@@ -1,4 +1,5 @@
-FROM --platform=amd64 ubuntu:24.04
+# check=skip=FromPlatformFlagConstDisallowed
+FROM --platform=linux/amd64 ubuntu:24.04 AS build
 
 RUN apt update
 RUN apt upgrade -y
@@ -29,6 +30,7 @@ RUN make install
 RUN ln -s /usr/local/openldap/bin/* /usr/local/bin/
 RUN ln -s /usr/local/openldap/sbin/* /usr/local/sbin/
 RUN ln -s /usr/local/openldap/libexec/slapd /usr/local/sbin/
+RUN ln -s /usr/local/openldap/etc/openldap /etc/
 
 RUN mkdir -p /usr/local/openldap/var/openldap-data
 RUN adduser --shell /usr/sbin/nologin --no-create-home --disabled-password ldap
@@ -36,7 +38,6 @@ RUN chown -R ldap:ldap /usr/local/openldap/var
 RUN chown -R ldap:ldap /usr/local/openldap/etc
 
 WORKDIR /usr/local/openldap
-SHELL ["/bin/bash", "-c"]
 COPY --chown=root:root --chmod=700 ./entrypoint.sh /entrypoint.sh
 ENTRYPOINT [ "/entrypoint.sh" ]
 

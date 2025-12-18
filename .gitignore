@@ -1,3 +1,6 @@
+conf/slapd.conf/*
+!conf/slapd.conf/model
+
 volumes/backups/ldap/*
 !volumes/backups/ldap/.gitkeep
 
