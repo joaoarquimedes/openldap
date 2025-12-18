@@ -1,0 +1,17 @@
+dn: uid=joao,ou=People,dc=exemplo,dc=local
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+cn: Joao Costa
+sn: Costa
+uid: joao
+uidNumber: 10001
+gidNumber: 10001
+homeDirectory: /home/joao
+loginShell: /bin/bash
+userPassword: {SSHA}mKJMF9w5e/BhIkrZuqsRJWWHwCkHP90/
+shadowLastChange: 20200
+shadowMin: 0
+shadowMax: 99999
+shadowWarning: 7
