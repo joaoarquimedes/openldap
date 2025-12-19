@@ -8,6 +8,6 @@ services:
     hostname: ldap
     volumes:
       - ./conf/:/usr/local/openldap/dist:ro
-      - ./conf/slapd.conf:/usr/local/openldap/etc/openldap/slapd.conf:rw
+      - ./volumes/ldap/slapd.d:/usr/local/openldap/etc/openldap/slapd.d:rw
       - ./volumes/ldap/data:/usr/local/openldap/var/openldap-data:rw
       - ./volumes/backups/ldap:/backups:rw

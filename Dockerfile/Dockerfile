@@ -33,6 +33,7 @@ RUN ln -s /usr/local/openldap/libexec/slapd /usr/local/sbin/
 RUN ln -s /usr/local/openldap/etc/openldap /etc/
 
 RUN mkdir -p /usr/local/openldap/var/openldap-data
+RUN mkdir -p /usr/local/openldap/etc/openldap/slapd.d
 RUN adduser --shell /usr/sbin/nologin --no-create-home --disabled-password ldap
 RUN chown -R ldap:ldap /usr/local/openldap/var
 RUN chown -R ldap:ldap /usr/local/openldap/etc

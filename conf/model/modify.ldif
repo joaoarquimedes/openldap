@@ -1,4 +1,4 @@
-dn: uid=joao,ou=People,dc=exemplo,dc=local
+dn: uid=joao,ou=People,dc=example,dc=org
 changetype: modify
 replace: userPassword
-userPassword: {SSHA}twCnDlVa67+jFoTtzyzDWcgigpmzjAm9
+userPassword: {SSHA}YkS/kuLRaXvlxlFSO6Tpp0Mgq5z6Jm5v

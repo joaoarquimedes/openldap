@@ -1,14 +1,21 @@
-dn: dc=exemplo,dc=local
+dn: dc=example,dc=org
 objectClass: top
 objectClass: dcObject
 objectClass: organization
-o: Exemplo
-dc: exemplo
+o: Example Organization
+dc: example
 
-dn: ou=People,dc=exemplo,dc=local
+dn: ou=People,dc=example,dc=org
 objectClass: organizationalUnit
 ou: People
 
-dn: ou=Groups,dc=exemplo,dc=local
+dn: ou=Groups,dc=example,dc=org
 objectClass: organizationalUnit
 ou: Groups
+
+dn: cn=admin,dc=example,dc=org
+objectClass: simpleSecurityObject
+objectClass: organizationalRole
+cn: admin
+description: LDAP Administrator
+userPassword: {SSHA}0HerkGK1ep9/e70I2PbqE4uDIaCuGzh5

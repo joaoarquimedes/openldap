@@ -1,4 +1,4 @@
-dn: uid=joao,ou=People,dc=exemplo,dc=local
+dn: uid=joao,ou=People,dc=example,dc=org
 objectClass: top
 objectClass: inetOrgPerson
 objectClass: posixAccount

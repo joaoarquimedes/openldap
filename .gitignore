@@ -8,3 +8,6 @@ volumes/backups/ldap/*
 
 volumes/ldap/data/*
 !volumes/ldap/data/.gitkeep
+
+volumes/ldap/slapd.d/*
+!volumes/ldap/slapd.d/.gitkeep

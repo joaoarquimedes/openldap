@@ -9,7 +9,7 @@ if [[ "$1" = "start" ]] ; then
 
   echo "--> Iniciando OpenLDAP..."
   /usr/local/openldap/libexec/slapd \
-    -f /usr/local/openldap/etc/openldap/slapd.conf \
+    -F /usr/local/openldap/etc/openldap/slapd.d \
     -u ldap -g ldap \
     -4 -d 2 \
     -h "ldap:/// ldapi:///"
